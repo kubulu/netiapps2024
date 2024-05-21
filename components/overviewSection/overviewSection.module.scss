@@ -25,14 +25,32 @@
     }
     ul{
       margin-top: 40px;
+      padding-left: 0px;
       li{
         color: #ffffff;
-        font-size: 18px;
+        font-size: 24px;
         list-style: none;
         width: fit-content;
         padding: 10px 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         border-radius: 10px;
+        height: 60px;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        display: flex;
+        img{
+          display: none;
+          transition: 0.5s ease all;
+          width: 22px;
+          margin-left: 10px;
+        }
+        &:hover{
+          border: 1px solid #16264A;
+          cursor: pointer;
+          img{
+            display: block;
+          }
+        }
       }
     }
   }

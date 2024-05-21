@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from "./nav.module.scss";
+import Link from "next/link";
 
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -31,16 +32,16 @@ const Header = () => {
             <div className={`container`}>
                 <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
                     <div className="col-md-2 mb-2 mb-md-0">
-                        <a href="/" className={styles.logo}>
+                        <Link href="/" className={styles.logo}>
                             <img src={`/images/logo.svg`} />
-                        </a>
+                        </Link>
                     </div>
 
                     <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="#" className="nav-link px-4 ">Company</a></li>
-                        <li><a href="#" className="nav-link px-4">Services</a></li>
-                        <li><a href="#" className="nav-link px-4">Solutions</a></li>
-                        <li><a href="#" className="nav-link px-4">Technologies</a></li>
+                        <li><Link href="#" className="nav-link px-4 ">Company</Link></li>
+                        <li><Link href="#" className="nav-link px-4">Services</Link></li>
+                        <li><Link href="#" className="nav-link px-4">Solutions</Link></li>
+                        <li><Link href="#" className="nav-link px-4">Technologies</Link></li>
                     </ul>
 
                     <div className="col-md-2 text-end">

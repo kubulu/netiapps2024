@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./hero.module.scss";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+
 import { motion } from "framer-motion";
 import ClientLogo from "../clientLogo/cleintLogo";
 
@@ -51,7 +52,7 @@ export default function Hero() {
                                         <motion.h1  initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2 }}
-                                                    className={`headingFont slide-text`}>Accelerate your Company's Growth with Premium Development Services</motion.h1>
+                                                    className={`headingFont slide-text`}>Accelerate your Company&apos;s Growth with Premium Development Services</motion.h1>
                                         <motion.div initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2.2 }}>
