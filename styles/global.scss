@@ -39,3 +39,20 @@ html {
     opacity: 1; /* End at fully opaque */
   }
 }
+
+
+.casestudySection{
+  .slick-slide{
+    scale: (.9);
+    transition: transform 0.3s ease;
+  }
+  .slick-active{
+    scale: (1);
+    filter: blur(0px) !important;
+  }
+  .slick-slide {
+    transition: all 0.3s ease-in-out;
+    filter: blur(5px);
+  }
+}
+
