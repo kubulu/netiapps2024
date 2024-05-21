@@ -1,3 +1,5 @@
+import "/styles/global.scss";
+
 import Hero from "../components/mainHero/hero";
 import OverviewSection from "../components/overviewSection/overviewSection";
 import TestimonialsSection from "../components/testimonialsSection/testimonialsSection";

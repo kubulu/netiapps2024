@@ -1,3 +1,4 @@
+import "/styles/global.scss";
 import Navigation from "../components/navigation/nav";
 import Hero from "../components/mainHero/hero";
 import OverviewSection from "../components/overviewSection/overviewSection";
