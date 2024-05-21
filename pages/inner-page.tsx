@@ -1,4 +1,4 @@
-import "/styles/global.scss";
+// import "/styles/global.scss";
 
 import InsightSection from "../components/insightSection/insightSection";
 import HireSection from "../components/hireSection/hireSection";
