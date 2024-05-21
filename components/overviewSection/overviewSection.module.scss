@@ -1,9 +1,9 @@
 .overviewSection{
   background: #091218;
   border-radius: 60px;
-  height: 1500px;
   transform: translateY(-80px);
   padding-top: 120px;
+  overflow: hidden;
   .rightPanel{
     color: white;
     padding: 80px;
@@ -71,4 +71,16 @@
       font-weight: 200;
     }
   }
+}
+
+.blur{
+  background: url("/images/fade.svg");
+  width: 940px;
+  height: 1000px;
+  position: absolute;
+  background-size: contain;
+  right: -40px;
+  bottom: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
