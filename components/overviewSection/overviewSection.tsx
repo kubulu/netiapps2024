@@ -15,7 +15,7 @@ export default function OverviewSection() {
                 <div className={`row`}>
                     <div className={`col-md-6`}>
                         <div className={styles.leftPanel}>
-                        <h2 className={`headingFont`}>Create Visually, Customize to Your Heart&apos;s Content.</h2>
+                        <h2 className={`headingFont`}>Create Visually, Customize to Your Hearts Content.</h2>
                         <ul>
                             <li>Software Solutions <img src={`/images/arrow-right.svg`} /></li>
                             <li>Website Development <img src={`/images/arrow-right.svg`} /></li>
