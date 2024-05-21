@@ -16,12 +16,12 @@ export default function InsightSection() {
                         </div>
                         <div className={styles.industryBlock}>
                             <ul>
-                                <li>Banking</li>
-                                <li>Banking</li>
-                                <li>Banking</li>
-                                <li>Banking</li>
-                                <li>Banking</li>
-                                <li>Banking</li>
+                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
+                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
+                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
+                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
+                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
+                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
                             </ul>
                         </div>
                         <div className={styles.insightBlock}>

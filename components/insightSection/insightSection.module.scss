@@ -15,6 +15,10 @@
     }
   }
   .industryBlock{
+    img{
+      width: 24px;
+      margin-right: 10px;
+    }
     ul{
       padding-left: 0px;
       li{
@@ -38,6 +42,7 @@
       img{
         width: 100%;
         object-fit: cover;
+        filter: grayscale(100);
       }
     }
   }
