@@ -4,7 +4,7 @@ import Script from "next/script";
 import '../styles/global.scss'
 // import { ThemeProvider } from "next-themes";
 // import Head from "next/head";
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+// import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 
 
