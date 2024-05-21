@@ -1,0 +1,56 @@
+.navigation{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+  margin-top: 20px;
+  a{
+    color: #ffffff;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .button{
+    button{
+      border: 1px solid #16264A;
+      padding: 12px 28px;
+      border-radius: 38px;
+      transform: translateX(-20px);
+      transition: 0.5s ease all;
+      &:hover{
+        background: none;
+        color: #FFFFFF;
+        img{
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+  .logo{
+    img{
+      width: 130px;
+    }
+  }
+}
+
+.themeButton {
+  img{
+    &:hover{
+      animation: icon-rotate 1s infinite linear;
+      cursor: pointer;
+    }
+  }
+
+}
+
+@keyframes icon-rotate {
+  from{rotate: 0deg}
+  to{rotate: 90deg}
+}
+.headerClass{
+  header{
+    background: rgba(30, 48, 59, 0.4);
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    border-radius: 40px;
+  }
+}

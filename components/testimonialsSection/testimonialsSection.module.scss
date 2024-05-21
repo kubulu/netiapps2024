@@ -1,0 +1,28 @@
+.testimonialBlock{
+  background: #09112F;
+  border-radius: 40px;
+  padding: 120px;
+  margin-bottom: 40px;
+  .leftContent{
+    color: #ffffff;
+    h2{
+      font-size: 80px;
+      background: linear-gradient(90deg, #1F239F 0%, #80819B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+}
+
+.rightContent{
+  color: #ffffff;
+  font-weight: 200;
+  .quote{
+    margin-bottom: 20px;
+  }
+  p{
+    padding-bottom: 40px;
+  }
+}

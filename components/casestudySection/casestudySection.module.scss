@@ -1,0 +1,59 @@
+.casestudy{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  h2{
+    font-size: 44px;
+    background: linear-gradient(90deg, #1F239F 0%, #80819B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+
+.casestudyCard{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 440px;
+  overflow: hidden;
+  .casestudyImg{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top:0px;
+    img{
+      width: 100%;
+    }
+  }
+  .casestudyContent{
+    z-index: 20;
+    position: relative;
+    padding: 40px;
+    width: 80%;
+    ul{
+      list-style: none;
+      display: inline-block;
+      padding-left: 0px;
+      li{
+        width: fit-content;
+        border-radius: 20px;
+        border: 1px dashed #ffffff;
+        color: #ffffff;
+        padding: 3px 19px;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    h4{
+      font-size: 42px;
+      color: #ffffff;
+      font-weight: normal;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "fonts";
+@import "variables/variables";
+
+
+body{
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: #030304;
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.headingFont{
+  font-family: 'PP Pangaia';
+}
+
+.slick-slider {
+  // Your slider styles here
+}
+
+.slick-slide {
+  // Your slide styles here
+}
+
+.slide-text {
+  opacity: 0; /* Initially hide text */
+  animation: fadeIn 1s ease forwards; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start from fully transparent */
+  }
+  to {
+    opacity: 1; /* End at fully opaque */
+  }
+}

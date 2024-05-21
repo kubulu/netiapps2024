@@ -1,0 +1,18 @@
+.hireSection{
+  background: #252A9F;
+  padding: 80px;
+  padding-top: 80px;
+  background: rgba(37, 42, 159, 0.1);
+  border-radius: 80px;
+   text-align: center;
+  h2{
+    font-size: 48px;
+    padding-left:20%;
+    padding-right:20%;
+    background: linear-gradient(90deg, #1F239F 0%, #80819B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}

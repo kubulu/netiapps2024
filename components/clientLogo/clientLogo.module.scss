@@ -1,0 +1,29 @@
+.clientLogo{
+  position: absolute;
+  z-index: 20;
+  color: #fff;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+ transform: translateY(120px);
+  img{
+    filter: brightness(0) invert(1);
+    transition: all .5s ease-in-out;
+
+    &:hover{
+      filter: grayscale(0%);
+    }
+  }
+  h4{
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+    animation: fade-in linear;
+    animation-timeline: view(500px 300px);
+  }
+}
+
+@keyframes fade-in {
+  from{opacity: 0;}
+  to{opacity: 1}
+}

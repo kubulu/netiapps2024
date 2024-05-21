@@ -1,0 +1,45 @@
+.overviewSection{
+  background: #091218;
+  border-radius: 60px;
+  height: 1500px;
+  transform: translateY(-80px);
+  padding-top: 120px;
+  .rightPanel{
+    color: white;
+    padding: 80px;
+    h3{
+      font-size: 30px;
+      font-weight: 200;
+      margin-bottom: 20px;
+    }
+  }
+
+  .leftPanel{
+    h2{
+      font-size: 52px;
+      background: linear-gradient(90deg, #1F239F 0%, #80819B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    ul{
+      margin-top: 40px;
+      li{
+        color: #ffffff;
+        font-size: 18px;
+        list-style: none;
+        width: fit-content;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+}
+
+.overviewSection {
+  animation: fade-in linear;
+  animation-timeline: view(500px 300px);
+}
