@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from "react";
 import type { AppProps } from 'next/app'
 import Script from "next/script";
-import '../styles/global.scss'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import '../styles/global.scss';
 // import { ThemeProvider } from "next-themes";
 // import Head from "next/head";
 // import Document, { Html, Head, Main, NextScript } from 'next/document'
