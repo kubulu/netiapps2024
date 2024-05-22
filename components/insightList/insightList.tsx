@@ -2,12 +2,9 @@ import React, { useState, useEffect } from 'react';
 import styles from "./insightList.module.scss"
 import { motion, useAnimation } from 'framer-motion';
 
-
-
 export default function InsightList() {
     return(
-        <motion.div
-            className={styles.insightList}>
+        <motion.div className={styles.insightList}>
             <div className={`container`}>
                 <div className={`row justify-content-center align-items-center`}>
                     <div className={`col-10`}>
@@ -23,7 +20,7 @@ export default function InsightList() {
                             </ul>
                         </div>
                         <div className={styles.insightBlock}>
-                            <div className={`row`}>
+                            <div className={`row g-col-6`}>
                                 <div className={`col-6`}>
                                     <div className={styles.insightCard}>
                                         <div className={styles.insightImg}>
@@ -153,8 +150,6 @@ export default function InsightList() {
 
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

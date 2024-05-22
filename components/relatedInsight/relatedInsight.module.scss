@@ -1,5 +1,5 @@
-.insightList{
-
+.insightSection{
+  background: #252A9F;
   padding: 80px;
   border-radius: 40px;
   .insightTitle{
@@ -23,21 +23,17 @@
       padding-left: 0px;
       li{
         display: inline-block;
+        background: #030304;
         border-radius: 40px;
         padding: 10px 20px;
         color: #FFFFFF;
         margin-right: 10px;
         margin-bottom: 10px;
-        border: 1px solid #FFFFFF;
       }
     }
   }
-  .insightCard{
-    margin-bottom: 80px;
-  }
   .insightBlock{
     color: #FFFFFF;
-    margin-bottom: 40px;
     .insightImg{
       width: 100%;
       height: 310px;
