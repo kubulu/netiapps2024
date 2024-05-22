@@ -1,0 +1,53 @@
+.insightList{
+
+  padding: 80px;
+  border-radius: 40px;
+  .insightTitle{
+    width: 65%;
+    margin-bottom: 40px;
+    h2{
+      font-size: 72px;
+      background: linear-gradient(90deg, #FFFFFF 0%, #83849A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  }
+  .industryBlock{
+    img{
+      width: 24px;
+      margin-right: 10px;
+    }
+    ul{
+      padding-left: 0px;
+      li{
+        display: inline-block;
+        border-radius: 40px;
+        padding: 10px 20px;
+        color: #FFFFFF;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #FFFFFF;
+      }
+    }
+  }
+  .insightCard{
+    margin-bottom: 40px;
+  }
+  .insightBlock{
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    .insightImg{
+      width: 100%;
+      height: 310px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      img{
+        width: 100%;
+        object-fit: cover;
+        filter: grayscale(100);
+      }
+    }
+  }
+}
