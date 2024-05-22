@@ -14,7 +14,7 @@ export default function InsightContent() {
                 <div className={`row justify-content-center`}>
                     <div className={`col-8`}>
                         <h3>Embracing the Shift</h3>
-                        <p>The integration of automation into business workflows is not just a trend—it's a significant evolution in how companies operate and compete in the digital age. Automation promises enhanced efficiency, reduced operational costs, and improved accuracy, transforming mundane tasks into automated processes. However, as with any significant change, the transition to highly automated systems comes with both tremendous opportunities and notable challenges.</p>
+                        <p>The integration of automation into business workflows is not just a trend—its a significant evolution in how companies operate and compete in the digital age. Automation promises enhanced efficiency, reduced operational costs, and improved accuracy, transforming mundane tasks into automated processes. However, as with any significant change, the transition to highly automated systems comes with both tremendous opportunities and notable challenges.</p>
                         <p>Automated workflows streamline processes that were traditionally manual, freeing up employees to focus on more strategic tasks. Here are several advantages that automation can bring to your business:</p>
                         <h3>Potential Pitfalls</h3>
                         <p>Automated workflows streamline processes that were traditionally manual, freeing up employees to focus on more strategic tasks. Here are several advantages that automation can bring to your business:</p>
