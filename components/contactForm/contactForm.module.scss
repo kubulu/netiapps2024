@@ -11,6 +11,14 @@
     margin-bottom: 40px;
     width: 80%;
   }
+  h3{
+    color: #FFFFFF;
+    a{
+      color: #FFFFFF;
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+    }
+  }
 
 
 
@@ -35,7 +43,23 @@
     }
   }
   .form{
-    color: #FFFFFF;
+    .button{
+      a{
+        border: 1px solid #16264A;
+        padding: 12px 28px;
+        border-radius: 38px;
+        transition: 0.5s ease all;
+        display: inline-flex;
+        &:hover{
+          background: none;
+          color: #FFFFFF;
+          img{
+            transform: translateX(5px);
+            margin-left: 4px;
+          }
+        }
+      }
+    }
   }
 
   .blueBlock{

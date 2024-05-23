@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./contactForm.module.scss"
+import Link from "next/link";
 
 
 export default function ContactForm() {
@@ -10,6 +11,7 @@ export default function ContactForm() {
                     <div className={`row`}>
                         <div className={`col-md-8`}>
                             <h2 className={`headingFont text-start`}>Let’s talk about what we can make, build, scale together</h2>
+                            <h3 className={`headingFont`}>Email | <Link href={`mailto:info@netiapps.com`}>info@netiapps.com</Link></h3>
                         </div>
                         <div className={`col-md-4`}>
                             <div className={styles.form}>
@@ -23,34 +25,36 @@ export default function ContactForm() {
                                     </div>
                                     <div className={`col-md-6`}>
                                         <div className="mb-3 form-floating">
+                                            <input type="name" className="form-control" id="exampleFormControlInput1" placeholder="Last Name" />
                                             <label htmlFor="exampleFormControlInput1" className="form-label">Last Name</label>
-                                            <input type="name" className="form-control" id="exampleFormControlInput1" placeholder="First Name" />
                                         </div>
                                     </div>
                                 </div>
                                 <div className={`row`}>
                                     <div className={`col-md-12`}>
                                         <div className="mb-3 form-floating">
-                                            <label htmlFor="exampleFormControlInput1" className="form-label">Email Address</label>
                                             <input type="name" className="form-control" id="exampleFormControlInput1" placeholder="Email Address" />
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Email Address</label>
                                         </div>
                                     </div>
                                     <div className={`col-md-12`}>
                                         <div className="mb-3 form-floating">
-                                            <label htmlFor="exampleFormControlInput1" className="form-label">Mobile Number</label>
                                             <input type="name" className="form-control" id="exampleFormControlInput1" placeholder="First Name" />
+                                            <label htmlFor="exampleFormControlInput1" className="form-label">Mobile Number</label>
+
                                         </div>
                                     </div>
                                     <div className={`col-md-12`}>
                                         <div className="mb-3 form-floating">
-                                            <label htmlFor="exampleFormControlInput1" className="form-label">Comments</label>
-                                            <input type="name" className="form-control" id="exampleFormControlInput1" placeholder="Comments" />
+                                            <textarea className="form-control" placeholder="Leave a comment here"
+                                                      id="floatingTextarea" rows="5"></textarea>
+                                            <label htmlFor="floatingTextarea">Comments</label>
                                         </div>
                                     </div>
                                     <div className={`col-md-12`}>
                                         <div className="mb-3 ">
                                             <div className={styles.button}>
-                                                <button className={`btn btn-outline-light`}>Send Enquiry <img src={`/images/arrow.svg`}  /></button>
+                                                <Link href={`/`} className={`btn btn-outline-light`}>Send Enquiry <img src={`/images/arrow.svg`}  /></Link>
                                             </div>
                                         </div>
                                     </div>
