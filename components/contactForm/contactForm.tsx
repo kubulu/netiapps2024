@@ -47,7 +47,7 @@ export default function ContactForm() {
                                     <div className={`col-md-12`}>
                                         <div className="mb-3 form-floating">
                                             <textarea className="form-control" placeholder="Leave a comment here"
-                                                      id="floatingTextarea" rows="5"></textarea>
+                                                      id="floatingTextarea"></textarea>
                                             <label htmlFor="floatingTextarea">Comments</label>
                                         </div>
                                     </div>
