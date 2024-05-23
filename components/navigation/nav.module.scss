@@ -33,12 +33,14 @@
 }
 
 .themeButton {
+  button{
   img{
     &:hover{
       animation: icon-rotate 1s infinite linear;
       cursor: pointer;
     }
   }
+}
 
 }
 

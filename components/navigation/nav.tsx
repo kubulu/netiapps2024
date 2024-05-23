@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from "./nav.module.scss";
-import Link from "next/link";
+import Link from "next/link";  
+
 
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -26,6 +27,14 @@ const Header = () => {
             setHeaderClass('');
         }
     }, [scrollY]);
+   
+    const [theme, setTheme] = useState('light');
+    const toggleTheme = () => {
+        setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+      };
+      useEffect(() => {
+        document.body.className = theme;
+      }, [theme]);
 
     return (
         <motion.div className={`${styles.navigation} ${styles.headerClass}`}>
@@ -46,14 +55,17 @@ const Header = () => {
 
                     <div className="col-md-2 text-end">
                         <div className={`d-flex justify-content-between align-items-center`}>
-                            <div className={styles.themeButton}>
-                                <img src={`/images/sun.svg`} />
-                            </div>
+                            <div>
+                             
+                               <button className='btn' onClick={toggleTheme}> 
+                                  <img src={theme === 'light' ? "/images/sun.svg" : "/images/Icons4.svg"} alt="Toggle Theme" />
+                               </button>
+                              
+                             </div>
                             <div className={styles.button}>
                                 <button type="button" className="btn btn-outline-light me-2">Contact <img src={`/images/button-arrow.svg`} /></button>
                             </div>
                         </div>
-
                     </div>
                 </header>
             </div>
