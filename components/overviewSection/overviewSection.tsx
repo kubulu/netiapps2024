@@ -3,46 +3,67 @@ import styles from "./overviewSection.module.scss"
 import {useScroll} from "framer-motion";
 import CasestudySection from "../casestudySection/casestudySection";
 import TopTechnology from "../topTechnology/topTechnology";
+import { ApiService } from "../../services/api.service";
+import { setCookie, getCookie } from 'cookies-next';
 
 
-export default function OverviewSection() {
+export default function OverviewSection(home: any) {
 
     const { scrollYProgress } = useScroll()
+    let services = home.home.services;
+    // console.log('SERR:',services);
+    const baseUrl = new ApiService();
     return(
         <div className={`${styles.overviewSection} bg-color-blue`}>
             <div className={`${styles.blur} dark-hidden`}></div>
             <div className={`container`}>
-                <div className={`row`}>
-                    <div className={`col-md-6`}>
+            <div className={`row tabNav`}>
+                    <div className="d-flex align-items-start col-md-6">
                         <div className={styles.leftPanel}>
+                        <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <h2 className={`headingFont`}>Create Visually, Customize to Your Hearts Content.</h2>
-                        <ul>
-                            <li>Software Solutions <img src={`/images/arrow-right.svg`} /></li>
-                            <li>Website Development <img src={`/images/arrow-right.svg`} /></li>
-                            <li>Mobile App Development <img src={`/images/arrow-right.svg`} /></li>
-                            <li>UI/UX Design <img src={`/images/arrow-right.svg`} /></li>
-                            <li>Software testing & QA <img src={`/images/arrow-right.svg`} /></li>
-                        </ul>
+                            {services?.map((element:any, index: any)=>(
+                                                <button key={index} 
+                                                 className={ (index == 0)? "nav-link active" :"nav-link"} id="v-pills-home-tab"
+                                                 data-bs-toggle="pill" data-bs-target={"#v-pills-"+index} 
+                                                 type="button" role="tab" aria-controls="v-pills-home" 
+                                                 aria-selected="true" 
+                                                >{element.service_title} <img src={`/images/arrow-right.svg`} /> </button> 
+                                            ))}
+                        </div>
                         </div>
 
                     </div>
-                    <div className={`col-md-6`}>
-                        <div className={styles.rightPanel}>
-                            <h3>Software development refers to the process of designing, coding, testing, and maintaining software products.</h3>
-                            <ul>
-                                <li>Software Solutions</li>
-                                <li>Website Development</li>
-                                <li>Mobile App Development</li>
-                                <li>UI/UX Design</li>
-                                <li>Software testing & QA</li>
-                            </ul>
-                        </div>
+                    <div className={`col-md-6 tab-content`} id="v-pills-tabContent">
+                        {services?.map((element:any, index: any)=>(
+                            <div key={index} className={(index == 0) ?"tab-pane fade show active":"tab-pane fade"} id={"v-pills-"+index} role="tabpanel" aria-labelledby={"v-pills-"+index+"-tab"}>
+                                <div className={styles.rightPanel}>
+                                    <h3>{element.service_title}</h3>
+                                    <p>{element.service_description}</p> 
+                                    <ul>
+                                        {element.related_serives?.map((ele:any, ind:any)=>(
+                                                <li key={ind}>
+                                                    <a href={baseUrl.getSiteUrl()+`services/`+ele.link} className={`linkIcon`}
+                                                    onClick={() =>{ 
+                                                        setCookie('main-menu','services')
+                                                        setCookie('sub-menu',element.service_slug)
+                                                        setCookie('landing-page','true')
+                                                        }}
+                                                        
+                                                    >{ele.title} <img src={`/images/arrow.svg` } alt="arrow-black"/> </a>
+                                                </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))}
+                                            
                     </div>
                 </div>
             </div>
 
 
-            <CasestudySection/>
+            <CasestudySection casestudy={home.home.casestudies}/>
             <TopTechnology/>
         </div>
     )

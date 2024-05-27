@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 import ClientLogo from "../clientLogo/cleintLogo";
 
 
-export default function Hero() {
+export default function Hero(hero: any) {
+    console.log('HERO==', hero);
     var settings = {
         dots: true,
         infinite: true,
@@ -20,6 +21,7 @@ export default function Hero() {
         pauseOnHover: false,
         autoplay: true,
     };
+    let banner = hero.hero.hero_section;
     return(
         <div className={styles.hero}>
             <video autoPlay loop muted playsInline className="hero-video">
@@ -33,52 +35,24 @@ export default function Hero() {
                         <div className={`col-md-7 pl-3`}>
                             <div>
                                 <Slider {...settings}>
+                                    {banner.map((element: any, index: any)=>(
                                     <div>
                                         <motion.h1  initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2 }}
-                                                    className={`headingFontOne slide-text`}>Next Generation Web Management System</motion.h1>
+                                                    className={`headingFont slide-text`}> {element.title} </motion.h1>
+
                                         <motion.div initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2.2 }}>
                                             <div className={styles.button}>
-                                                <a href={`#`} className={`btn btn-outline-light`}>Read More <img src={`/images/button-arrow.svg`} /></a>
+                                                <a href={element.link} className={`btn btn-outline-light`}>Read More <img src={`/images/button-arrow.svg`} /></a>
                                             </div>
 
 
                                         </motion.div>
                                     </div>
-                                    <div>
-                                        <motion.h1  initial={{ opacity: 0, y: -20 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    transition={{ duration: 2 }}
-                                                    className={`headingFontOne slide-text`}>Accelerate your Company&apos;s Growth with Premium Development Services</motion.h1>
-                                        <motion.div initial={{ opacity: 0, y: -20 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    transition={{ duration: 2.2 }}>
-                                            <div className={styles.button}>
-                                                <a href={`#`} className={`btn btn-outline-light`}>Read More <img src={`/images/button-arrow.svg`} /></a>
-                                            </div>
-
-
-                                        </motion.div>
-                                    </div>
-                                    <div>
-                                        <motion.h1  initial={{ opacity: 0, y: -20 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    transition={{ duration: 2 }}
-                                                    className={`headingFontOne slide-text`}>On-Demand Custom App Developers Available Upon Request</motion.h1>
-                                        <motion.div initial={{ opacity: 0, y: -20 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    transition={{ duration: 2.2 }}>
-                                            <div className={styles.button}>
-                                                <a href={`#`} className={`btn btn-outline-light`}>Read More <img src={`/images/button-arrow.svg`} /></a>
-                                            </div>
-
-
-                                        </motion.div>
-                                    </div>
-
+                                    ))}
                                 </Slider>
                             </div>
 
@@ -111,7 +85,7 @@ export default function Hero() {
 
                 </div>
             </div>
-            <ClientLogo/>
+            <ClientLogo client={hero.hero.clients} />
         </div>
     )
 }

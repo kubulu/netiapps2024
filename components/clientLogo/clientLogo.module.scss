@@ -9,6 +9,7 @@
   img{
     filter: brightness(0) invert(1);
     transition: all .5s ease-in-out;
+    width: 70%;
 
     &:hover{
       filter: grayscale(0%);

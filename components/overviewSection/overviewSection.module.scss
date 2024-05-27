@@ -11,17 +11,22 @@
       font-size: 30px;
       font-weight: 200;
       margin-bottom: 20px;
+      color: #ffffff;
+    }
+    p{
+      color: #ffffff;
+      font-size: 20px;
     }
   }
 
   .leftPanel{
     h2{
       font-size: 52px;
+      color: #ffffff;
     }
-    ul{
-      margin-top: 40px;
-      padding-left: 0px;
-      li{
+   
+      button{
+        color: #ffffff;
         font-size: 24px;
         list-style: none;
         width: fit-content;
@@ -32,6 +37,8 @@
         box-sizing: border-box;
         border: 1px solid transparent;
         display: flex;
+        margin-top: 40px;
+        padding-left: 0px;
         img{
           display: none;
           transition: 0.5s ease all;
@@ -39,17 +46,18 @@
           margin-left: 10px;
         }
         &:hover{
-          border: 1px solid #16264A;
+          border: 2px solid #16264A;
           cursor: pointer;
           img{
             display: block;
           }
         }
       }
-    }
+   
+  }
   }
 
-}
+
 
 .overviewSection {
   animation: fade-in linear;
@@ -62,7 +70,12 @@
     list-style: none;
     li{
       padding-bottom: 10px;
-      font-weight: 200;
+      font-weight: 200px;
+      font-size: 15px;
+      a{
+      color: #ffffff;
+      text-decoration: none;
+      }
     }
   }
 }

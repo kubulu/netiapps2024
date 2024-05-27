@@ -7,14 +7,17 @@ import InsightSection from "../components/insightSection/insightSection";
 import HireSection from "../components/hireSection/hireSection";
 import FooterSection from "../components/footerSection/footerSection";
 import Nav from "../components/navigation/nav";
+import { ApiService } from "../services/api.service";
+import axios from 'axios';
 
-export default function Home() {
+
+export default function Home(props: any) {
     return(
         <div>
             {/*<Navigation/>*/}
             <Nav/>
-            <Hero/>
-            <OverviewSection/>
+            <Hero hero={props.home[0].acf} />
+            <OverviewSection home={props.home[0].acf} />
             <TestimonialsSection/>
             <InsightSection/>
             <HireSection/>
@@ -22,3 +25,19 @@ export default function Home() {
         </div>
         )
 }
+
+export async function getServerSideProps() {
+    const baseUrl = new ApiService();
+    const response = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/home-page`);
+    const home = await response.json(); 
+  
+  
+  
+  if (home && home.length > 0) {
+    return {props: {home}}
+  }
+  else {
+    return {props: {}}
+  }
+  
+  }  
