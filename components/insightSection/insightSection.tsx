@@ -7,7 +7,7 @@ import { motion, useAnimation } from 'framer-motion';
 export default function InsightSection() {
     return(
         <motion.div
-            className={styles.insightSection}>
+            className={`${styles.insightSection} backgroundColorChange`}>
             <div className={`container`}>
                 <div className={`row justify-content-center align-items-center`}>
                     <div className={`col-10`}>

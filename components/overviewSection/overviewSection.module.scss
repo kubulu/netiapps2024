@@ -4,8 +4,8 @@
   transform: translateY(-80px);
   padding-top: 120px;
   overflow: hidden;
+  padding-bottom: 40px;
   .rightPanel{
-    color: white;
     padding: 80px;
     h3{
       font-size: 30px;
@@ -17,17 +17,11 @@
   .leftPanel{
     h2{
       font-size: 52px;
-      background: linear-gradient(90deg, #1F239F 0%, #80819B 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
     }
     ul{
       margin-top: 40px;
       padding-left: 0px;
       li{
-        color: #ffffff;
         font-size: 24px;
         list-style: none;
         width: fit-content;

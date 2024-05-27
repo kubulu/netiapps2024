@@ -9,8 +9,8 @@ export default function OverviewSection() {
 
     const { scrollYProgress } = useScroll()
     return(
-        <div className={styles.overviewSection}>
-            <div className={styles.blur}></div>
+        <div className={`${styles.overviewSection} bg-color-blue`}>
+            <div className={`${styles.blur} dark-hidden`}></div>
             <div className={`container`}>
                 <div className={`row`}>
                     <div className={`col-md-6`}>

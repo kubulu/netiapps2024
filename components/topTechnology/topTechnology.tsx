@@ -9,28 +9,28 @@ export default function TopTechnology() {
             <div className={`container`}>
                 <div className={`row`}>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                     <div className={`col`}>
-                        <div className={styles.card}><img src={`/images/android.png`} /> </div>
+                        <div className={`${styles.card} card-bg`}><img src={`/images/android.png`} /> </div>
                     </div>
                 </div>
             </div>

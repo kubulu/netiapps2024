@@ -5,7 +5,7 @@ import styles from "./footerSection.module.scss"
 export default function FooterSection() {
     return(
         <div>
-            <div className={styles.footerSection}>
+            <div className={`${styles.footerSection} footerSection`}>
                 <div className={`container`}>
                     <div className={`row`}>
                         <div className={`col-md-4`}>
@@ -39,7 +39,7 @@ export default function FooterSection() {
                     </div>
                 </div>
             </div>
-            <div className={styles.footerBottom}>
+            <div className={`${styles.footerBottom} footerBottom`}>
                 <div className={`container`}>
                     <div className={`row`}>
                         <div className={`col-md-6`}>

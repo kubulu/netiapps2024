@@ -1,5 +1,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "fonts";
+@import "colors";
 @import "variables/variables";
 
 
@@ -7,8 +8,6 @@ body{
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 200;
-  background: #091218;
   scroll-behavior: smooth;
 }
 html {
@@ -16,6 +15,10 @@ html {
 }
 
 .headingFont{
+  font-family: 'PP Pangaia';
+}
+
+.headingFontOne{
   font-family: 'PP Pangaia';
 }
 
@@ -55,5 +58,30 @@ html {
     transition: all 0.3s ease-in-out;
     filter: blur(5px);
   }
+}
+
+
+.blurFadeUp{
+  animation: blur linear;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+
+}
+@keyframes blur {
+  from{ filter: blur(100px); transform: translateY(-300px)}
+  to{ filter: blur(0px); transform: translateY(0px)}
+}
+
+.fadeZoom{
+  animation: fadeZoom linear;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 400px;
+}
+
+@keyframes fadeZoom {
+  from{ opacity: 0; scale: 0.6}
+  to{  opacity: 1; scale: 1}
 }
 

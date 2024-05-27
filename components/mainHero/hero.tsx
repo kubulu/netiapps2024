@@ -37,7 +37,7 @@ export default function Hero() {
                                         <motion.h1  initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2 }}
-                                                    className={`headingFont slide-text`}>Next Generation Web Management System</motion.h1>
+                                                    className={`headingFontOne slide-text`}>Next Generation Web Management System</motion.h1>
                                         <motion.div initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2.2 }}>
@@ -52,7 +52,7 @@ export default function Hero() {
                                         <motion.h1  initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2 }}
-                                                    className={`headingFont slide-text`}>Accelerate your Company&apos;s Growth with Premium Development Services</motion.h1>
+                                                    className={`headingFontOne slide-text`}>Accelerate your Company&apos;s Growth with Premium Development Services</motion.h1>
                                         <motion.div initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2.2 }}>
@@ -67,7 +67,7 @@ export default function Hero() {
                                         <motion.h1  initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2 }}
-                                                    className={`headingFont slide-text`}>On-Demand Custom App Developers Available Upon Request</motion.h1>
+                                                    className={`headingFontOne slide-text`}>On-Demand Custom App Developers Available Upon Request</motion.h1>
                                         <motion.div initial={{ opacity: 0, y: -20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ duration: 2.2 }}>

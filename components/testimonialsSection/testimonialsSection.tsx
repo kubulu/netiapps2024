@@ -19,14 +19,14 @@ export default function TestimonialsSection() {
     return(
         <div className={styles.testimonials}>
             <div className={'container'}>
-                <div className={styles.testimonialBlock}>
+                <div className={`${styles.testimonialBlock} testimonialBlock fadeZoom`}>
                     <div className={`row`}>
-                        <div className={`col-md-6`}>
+                        <div className={`col-md-6 blurFadeUp`}>
                             <div className={styles.leftContent}>
                                 <h2 className={`headingFont`}>Creating Digital Experiences Since 2006</h2>
                             </div>
                         </div>
-                        <div className={`col-md-6`}>
+                        <div className={`col-md-6 blurFadeUp`}>
                             <div className={styles.rightContent}>
                                 <div className={styles.quote}>
                                     <img src={`/images/mark.svg`} />
