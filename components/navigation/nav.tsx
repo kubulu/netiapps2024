@@ -71,10 +71,9 @@ const Header = () => {
                         <div className={`d-flex justify-content-between align-items-center`}>
                             <div>
                              
-                               <button className='btn' onClick={handleToggle}> 
-                                  <img src={darkTheme ? "/images/sun.svg" : "/images/moon.svg"} alt="Toggle Theme" />
-                               </button>
-
+                            <button  className={`btn ${darkTheme ? 'dark-mode' : 'light-mode'}`}  onClick={handleToggle}> 
+                            <img src={darkTheme ? "/images/sun.svg" : "/images/moon.svg"} alt="Toggle Theme" />
+                             </button>
                               
                              </div>
                             <div className={styles.button}>
