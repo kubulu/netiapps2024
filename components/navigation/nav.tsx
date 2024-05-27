@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from "./nav.module.scss";
 import Link from "next/link";  
+import { setCookie, getCookie } from 'cookies-next';
+
 
 
 const Header = () => {
@@ -28,13 +30,25 @@ const Header = () => {
         }
     }, [scrollY]);
    
-    const [theme, setTheme] = useState('light');
-    const toggleTheme = () => {
-        setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
-      };
-      useEffect(() => {
-        document.body.className = theme;
-      }, [theme]);
+    // const [theme, setTheme] = useState('light');
+    const initialTheme = ((getCookie('theme') === 'dark') ? true : false);
+    const [darkTheme, setDarkTheme] = useState(initialTheme);
+
+    useEffect(() => {
+        if (darkTheme) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            window.localStorage.setItem("theme", "dark");
+        } else {
+            document.documentElement.removeAttribute("data-theme");
+            window.localStorage.setItem("theme", "light");
+        }
+    }, [darkTheme]);
+
+    const handleToggle = () => {
+        const newTheme = !darkTheme;
+        setDarkTheme(newTheme);
+        setCookie('theme', newTheme ? 'dark' : 'light');
+    };
 
     return (
         <motion.div className={`${styles.navigation} ${styles.headerClass} `}>
@@ -44,7 +58,7 @@ const Header = () => {
                         <Link href="/" className={styles.logo}>
                             <img src={`/images/logo.svg`} />
                         </Link>
-                    </div>
+                    </div> 
 
                     <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li><Link href="#" className="nav-link px-4 cus-link ">Company</Link></li>
@@ -57,9 +71,10 @@ const Header = () => {
                         <div className={`d-flex justify-content-between align-items-center`}>
                             <div>
                              
-                               <button className='btn' onClick={toggleTheme}> 
-                                  <img src={theme === 'light' ? "/images/sun.svg" : "/images/moon.svg"} alt="Toggle Theme" />
+                               <button className='btn' onClick={handleToggle}> 
+                                  <img src={darkTheme ? "/images/sun.svg" : "/images/moon.svg"} alt="Toggle Theme" />
                                </button>
+
                               
                              </div>
                             <div className={styles.button}>
