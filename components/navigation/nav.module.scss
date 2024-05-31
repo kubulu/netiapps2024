@@ -9,20 +9,20 @@
     padding-right: 60px;
   }
   .button{
-    button{
-      border: 1px solid #16264A;
-      padding: 12px 28px;
-      border-radius: 38px;
-      transform: translateX(-20px);
-      transition: 0.5s ease all;
-      &:hover{
-        background: none;
-        color: #FFFFFF;
-        img{
-          transform: translateX(5px);
-        }
-      }
-    }
+    //button{
+    //  border: 1px solid #16264A;
+    //  padding: 12px 28px;
+    //  border-radius: 38px;
+    //  transform: translateX(-20px);
+    //  transition: 0.5s ease all;
+    //  &:hover{
+    //    background: none;
+    //    color: #FFFFFF;
+    //    img{
+    //      transform: translateX(5px);
+    //    }
+    //  }
+    //}
   }
   .logo{
     img{
@@ -47,10 +47,25 @@
   from{rotate: 0deg}
   to{rotate: 90deg}
 }
+
 .headerClass{
   header{
-    -webkit-backdrop-filter: blur(13px);
-    backdrop-filter: blur(13px);
-    border-radius: 40px;
+
+  }
+}
+
+.dropdown{
+  background: #FFFFFF;
+  width: 100%;
+  border-radius: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  ul{
+    li{
+      list-style: none;
+      a{
+        text-decoration: none;
+      }
+    }
   }
 }

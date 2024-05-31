@@ -19,7 +19,7 @@ export default function TestimonialsSection() {
     return(
         <div className={styles.testimonials}>
             <div className={'container'}>
-                <div className={`${styles.testimonialBlock} testimonialBlock fadeZoom`}>
+                <div className={`${styles.testimonialBlock} testimonialBlock fadeZoom blue-bg`}>
                     <div className={`row`}>
                         <div className={`col-md-6 blurFadeUp`}>
                             <div className={styles.leftContent}>

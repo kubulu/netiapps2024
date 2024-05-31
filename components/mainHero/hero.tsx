@@ -31,7 +31,6 @@ export default function Hero(hero: any) {
             <div className={styles.heroContent}>
                 <div className="container">
                     <div className="row">
-
                         <div className={`col-md-7 pl-3`}>
                             <div>
                                 <Slider {...settings}>

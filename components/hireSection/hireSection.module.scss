@@ -1,12 +1,11 @@
 .hireSection{
   padding: 80px;
   padding-top: 80px;
-  background: rgba(37, 42, 159, 0.1);
   border-radius: 80px;
    text-align: center;
   .button{
     a{
-      border: 1px solid #16264A;
+
       padding: 12px 28px;
       border-radius: 38px;
       transition: 0.5s ease all;
@@ -16,7 +15,7 @@
       }
       &:hover{
         background: none;
-        color: #FFFFFF;
+
         img{
           transform: translateX(5px);
 
