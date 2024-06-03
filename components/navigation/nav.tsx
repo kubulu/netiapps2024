@@ -99,12 +99,27 @@ const Header = () => {
                     <div className={`col-12`}>
                         {dropdown1Open && (
                             <div className={styles.dropdown}>
-                                {/* Dropdown content for Company goes here */}
-                                <ul>
-                                    <li><Link href="#">Option 1 for Company</Link></li>
-                                    <li><Link href="#">Option 2 for Company</Link></li>
-                                    <li><Link href="#">Option 3 for Company</Link></li>
-                                </ul>
+                                <div className={`row`}>
+                                    <div className={`col-md-6`}>
+                                        <ul>
+                                            <li><Link href={`/`}>About</Link></li>
+                                            <li><Link href={`/`}>Engagement Models</Link></li>
+                                            <li><Link href={`/`}>Development Process</Link></li>
+                                            <li><Link href={`/`}>Clients</Link></li>
+                                            <li><Link href={`/`}>Careers</Link></li>
+                                            <li><Link href={`/`}>Blog</Link></li>
+                                            <li><Link href={`/`}>Terms of Use</Link></li>
+                                            <li><Link href={`/`}>Privacy Policy</Link></li>
+                                        </ul>
+                                    </div>
+
+                                    <div className={`col-md-6`}>
+                                        <div className={styles.navContent}>
+                                            <h3>About Company</h3>
+                                            <p>NetiApps is a global web and mobile application development company that delivers beautiful digital experiences with a customer-first strategy</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         )}
                         {dropdown2Open && (

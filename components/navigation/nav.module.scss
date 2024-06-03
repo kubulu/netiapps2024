@@ -60,9 +60,23 @@
   border-radius: 40px;
   padding-top: 50px;
   padding-bottom: 50px;
+  color: #000000;
+.navContent{
+  padding-right: 80px;
+  p{
+    font-size: 28px;
+  }
+  h3{
+    font-size: 16px;
+  }
+}
   ul{
+    column-count: 2;
+    padding-left: 0px;
+
     li{
       list-style: none;
+      padding-bottom: 10px;
       a{
         text-decoration: none;
       }
