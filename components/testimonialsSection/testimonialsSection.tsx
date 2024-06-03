@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import styles from "./testimonialsSection.module.scss"
 
 
-export default function TestimonialsSection() {
+export default function TestimonialsSection(testimonials: any) {
+    console.log('Testiii=',testimonials);
     const settings = {
         dots: true,
         fade: true,
@@ -32,12 +33,15 @@ export default function TestimonialsSection() {
                                     <img src={`/images/mark.svg`} />
                                 </div>
                                 <Slider {...settings}>
-                                <div className={styles.testimonialContent}>
-                                    <p>Altran has been working with NetiApps for a number of years now and we are very pleased with the dedication and responsiveness of the NetiApps team. NetiApps is a much valued vendor/partner, who go out of their way to meet deadlines and provide solutions. The NetiApps culture of ingenuity, positive attitude and commitment to the task at hand is much appreciated. We look forward to a long and fruitful relationship.</p>
-                                    <h5>Altran Team (A Part of Capgemini Engineering)</h5>
-                                </div>
-
-                                    <div className={styles.testimonialContent}>
+                                    {testimonials.testimonials.testimonial_list.map((element: any, index: any)=>(
+                                        <div className={styles.testimonialContent}>
+                                            <p>{element.content}</p>
+                                            <h5>{element.author},</h5>
+                                            <h5>{element.designation},</h5>
+                                            <h5>{element.company}</h5>
+                                        </div>
+                                    ))}
+                                    {/* <div className={styles.testimonialContent}>
                                         <p>It was great working with NetiApps. Anyone can provide technology solutions but really understanding the business needs of a customer requires dedicated efforts as shown by NetiApps. Their solutions contributed to some outstanding support to automate DTDC’s critical processes.</p>
                                         <h5>Altran Team (A Part of Capgemini Engineering)</h5>
                                     </div>
@@ -50,7 +54,7 @@ export default function TestimonialsSection() {
                                     <div className={styles.testimonialContent}>
                                         <p>Altran has been working with NetiApps for a number of years now and we are very pleased with the dedication and responsiveness of the NetiApps team. NetiApps is a much valued vendor/partner, who go out of their way to meet deadlines and provide solutions. The NetiApps culture of ingenuity, positive attitude and commitment to the task at hand is much appreciated. We look forward to a long and fruitful relationship.</p>
                                         <h5>Altran Team (A Part of Capgemini Engineering)</h5>
-                                    </div>
+                                    </div> */}
                                 </Slider>
                             </div>
                         </div>

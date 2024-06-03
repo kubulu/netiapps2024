@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./innerHero.module.scss"
+import { title } from "process";
 
 
-export default function InnerHero() {
+export default function InnerHero(banner: any) {
+    // console.log('Innn=',banner);
     return(
         <div className={styles.innerHero}>
             <div className={`container`}>
@@ -10,10 +12,14 @@ export default function InnerHero() {
                     <div className={`col-1`}>
 
                     </div>
-                    <div className={`col-8 pl-5`}>
-                        <h2 className={``}>Software Development</h2>
-                        <p>NetiApps is a leading provider of software development services. We build enterprise-level Java, Python and IOT applications for clients Worldwide. It is the process of creating a piece of software that is designed to accomplish a specific task. It encompasses all phases of the software development life cycle.</p>
+                    {banner.banner.content_section.map((element: any, index: any)=>(
+                     <>{element.acf_fc_layout == 'sub_title' && ( 
+                    <div className={`col-8 pl-5`}>                   
+                        <h2>{element.title}</h2><p>{element.sub_title}</p>                      
                     </div>
+                    )}</>
+                    ))}
+                   
                     <div className={`col-3`}>
                         <div className={styles.round}>
                             <img src={`/images/software.svg`} />

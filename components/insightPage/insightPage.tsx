@@ -8,7 +8,8 @@ import RelatedInsight from "../relatedInsight/relatedInsight";
 
 
 
-export default function InsightPage() {
+export default function InsightPage(blog: any) {
+    console.log('Bloggg==',blog);
 
     const { scrollYProgress } = useScroll()
     return(

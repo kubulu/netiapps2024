@@ -2,21 +2,33 @@ import React from "react";
 import styles from "./twoSectionContent.module.scss"
 
 
-export default function TwoSectionContent() {
+export default function TwoSectionContent({Title, contentLeft, contentRight}:any) {
+    console.log('Two=',contentLeft);
     return(
         <div className={styles.twoSectionContent}>
             <div className={`container`}>
                 <div className={styles.paddingLeft}>
-                    <h2 className={`headingFont text-start`}>We build software solutions to manage your data and systems.</h2>
-                    <div className={`row`}>
+                <h2 className={`headingFont text-start`}>{Title}</h2>
+                <div className={`row`}>
                         <div className={`col-md-5`}>
-                            <p>If your business has grown enough that it needs a better solution for managing its data and systems, then NetiApps has the perfect solution: an enterprise software development service. With support for all major databases and programming languages, our experienced developers will help take your business from good to great!</p>
+                        <div  dangerouslySetInnerHTML={{ __html: contentRight }} />
                         </div>
                         <div className={`col-md-5`}>
-                            <p>If your business has grown enough that it needs a better solution for managing its data and systems, then NetiApps has the perfect solution: an enterprise software development service. With support for all major databases and programming languages, our experienced developers will help take your business from good to great!</p>
+                            <div  dangerouslySetInnerHTML={{ __html: contentLeft }} />
                         </div>
                     </div>
+                       
+                    {/* <h2 className={`headingFont text-start`}>{Title}</h2>
+
+                       
+                        </div>
+                        <div className={`col-md-6`}>
+                            <div className="row">
+                        <div className="col-md-6"  dangerouslySetInnerHTML={{ __html: contentRight }} />
+                        <div className="col-md-6"   dangerouslySetInnerHTML={{ __html: contentLeft }} />
+                        </div> */}
                 </div>
+                    
 
             </div>
         </div>

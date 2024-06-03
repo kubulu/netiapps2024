@@ -1,10 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./insightSection.module.scss"
 import { motion, useAnimation } from 'framer-motion';
+import { setCookie, getCookie } from 'cookies-next';
+import axios from 'axios';
+import { ApiService } from "../../services/api.service";
+import moment from 'moment'; 
 
 
+export default function InsightSection({industries, blogs}: any) {
+   
+    const [insights, setInsights] = useState(Array);
+    const [blogId, setBlogId] = useState(Number);
+    const baseUrl = new ApiService();
+    {useEffect(()=>{
+        axios.get(baseUrl.getBaseUrl()+`/wp-json/wp/v2/blog-detail?orderby=date&order=desc&per_page=2`).then((response) => {
+            setInsights(response.data);
+        });
+       
+    },[blogId])}
 
-export default function InsightSection() {
+    console.log('bloggg=',insights);
+
     return(
         <motion.div
             className={`${styles.insightSection} backgroundColorChange`}>
@@ -16,40 +32,30 @@ export default function InsightSection() {
                         </div>
                         <div className={styles.industryBlock}>
                             <ul>
-                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
-                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
-                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
-                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
-                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
-                                <li><img src={`/images/Icons1.svg`} /> Banking</li>
+                                {industries.map((element: any, index: any)=>(
+                                <li key={index}><img src={element.acf.image} /> {element.acf.title} </li>
+                                ))}
                             </ul>
                         </div>
                         <div className={styles.insightBlock}>
                             <div className={`row`}>
-                                <div className={`col-6`}>
+                            {insights?.map((element:any, index:any)=>(                                    
+                                <div className={`col-6`} key={index}>
                                     <div className={styles.insightCard}>
+                                        <a href={baseUrl.getSiteUrl()+`blogs/`+element.slug}>
                                         <div className={styles.insightImg}>
-                                            <img src={`/images/insight.png`} />
+                                            <img src={element.acf.image} />
                                         </div>
+                                        </a>
+                                        <a href={baseUrl.getSiteUrl()+`blogs/`+element.slug}>
                                         <div className={styles.insightContent}>
-                                            <h5>Unlocking Success: The Art of Talent Acquisition</h5>
-                                            <p>23 February 2024</p>
+                                            <h5>{element.acf.title}</h5>
+                                            <p>{ moment(element.date).format('DD MMMM YYYY') }</p>
                                         </div>
+                                        </a>
                                     </div>
-
-                                </div>
-                                <div className={`col-6`}>
-                                    <div className={styles.insightCard}>
-                                        <div className={styles.insightImg}>
-                                            <img src={`/images/insight.png`} />
-                                        </div>
-                                        <div className={styles.insightContent}>
-                                            <h5>Unlocking Success: The Art of Talent Acquisition</h5>
-                                            <p>23 February 2024</p>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                </div>                                   
+                            ))} 
                             </div>
 
                         </div>

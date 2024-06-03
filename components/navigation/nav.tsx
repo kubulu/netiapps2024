@@ -7,10 +7,8 @@ import { setCookie, getCookie } from 'cookies-next';
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
     const [headerClass, setHeaderClass] = useState('');
-    const [dropdown1Open, setDropdown1Open] = useState(false); // State to manage dropdown visibility for Company
-    const [dropdown2Open, setDropdown2Open] = useState(false); // State to manage dropdown visibility for Services
-    const [dropdown3Open, setDropdown3Open] = useState(false); // State to manage dropdown visibility for Solutions
-    const [dropdown4Open, setDropdown4Open] = useState(false); // State to manage dropdown visibility for Technologies
+    const [activeDropdown, setActiveDropdown] = useState(null);
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -51,20 +49,13 @@ const Header = () => {
         setCookie('theme', newTheme ? 'dark' : 'light');
     };
 
-    const toggleDropdown1 = () => {
-        setDropdown1Open(prevState => !prevState); // Toggle dropdown visibility for Company
+
+    const handleMouseEnter = (dropdown: any) => {
+        setActiveDropdown(dropdown);
     };
 
-    const toggleDropdown2 = () => {
-        setDropdown2Open(prevState => !prevState); // Toggle dropdown visibility for Services
-    };
-
-    const toggleDropdown3 = () => {
-        setDropdown3Open(prevState => !prevState); // Toggle dropdown visibility for Solutions
-    };
-
-    const toggleDropdown4 = () => {
-        setDropdown4Open(prevState => !prevState); // Toggle dropdown visibility for Technologies
+    const handleMouseLeave = () => {
+        setActiveDropdown(null);
     };
 
     return (
@@ -76,11 +67,25 @@ const Header = () => {
                             <img src={`/images/logo.svg`} />
                         </Link>
                     </div>
+                    {/* <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><Link href="#" className="nav-link px-4 cus-link ">Company</Link></li>
+                        <li><Link href="#" className="nav-link px-4 cus-link">Services</Link></li>
+                        <li><Link href="#" className="nav-link px-4 cus-link">Solutions</Link></li>
+                        <li><Link href="#" className="nav-link px-4 cus-link">Technologies</Link></li>
+                    </ul> */}
                     <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><Link href="#" className="nav-link px-4 cus-link" onClick={toggleDropdown1}>Company</Link></li>
-                        <li><Link href="#" className="nav-link px-4 cus-link" onClick={toggleDropdown2}>Services</Link></li>
-                        <li><Link href="#" className="nav-link px-4 cus-link" onClick={toggleDropdown3}>Solutions</Link></li>
-                        <li><Link href="#" className="nav-link px-4 cus-link" onClick={toggleDropdown4}>Technologies</Link></li>
+                        <li onMouseEnter={() => handleMouseEnter('dropdown1')} onMouseLeave={handleMouseLeave}>
+                            <Link href="#" className="nav-link px-4 cus-link">Company</Link>
+                        </li>
+                        <li onMouseEnter={() => handleMouseEnter('dropdown2')} onMouseLeave={handleMouseLeave}>
+                            <Link href="#" className="nav-link px-4 cus-link">Services</Link>
+                        </li>
+                        <li onMouseEnter={() => handleMouseEnter('dropdown3')} onMouseLeave={handleMouseLeave}>
+                            <Link href="#" className="nav-link px-4 cus-link">Solutions</Link>
+                        </li>
+                        <li onMouseEnter={() => handleMouseEnter('dropdown4')} onMouseLeave={handleMouseLeave}>
+                            <Link href="#" className="nav-link px-4 cus-link">Technologies</Link>
+                        </li>
                     </ul>
                     <div className="col-md-2 text-end">
                         <div className={`d-flex justify-content-between align-items-center`}>
@@ -97,7 +102,8 @@ const Header = () => {
                 </header>
                 <div className={`row`}>
                     <div className={`col-12`}>
-                        {dropdown1Open && (
+                        {/* {dropdown1Open && ( */}
+                        {activeDropdown === 'dropdown1' && (
                             <div className={styles.dropdown}>
                                 <div className={`row`}>
                                     <div className={`col-md-6`}>
@@ -122,7 +128,8 @@ const Header = () => {
                                 </div>
                             </div>
                         )}
-                        {dropdown2Open && (
+                        {/* {dropdown2Open && ( */}
+                        {activeDropdown === 'dropdown2' && (
                             <div className={styles.dropdown}>
                                 {/* Dropdown content for Services goes here */}
                                 <ul>
@@ -132,7 +139,8 @@ const Header = () => {
                                 </ul>
                             </div>
                         )}
-                        {dropdown3Open && (
+                        {/* {dropdown3Open && ( */}
+                        {activeDropdown === 'dropdown3' && (
                             <div className={styles.dropdown}>
                                 {/* Dropdown content for Solutions goes here */}
                                 <ul>
@@ -142,7 +150,8 @@ const Header = () => {
                                 </ul>
                             </div>
                         )}
-                        {dropdown4Open && (
+                        {/* {dropdown4Open && ( */}
+                        {activeDropdown === 'dropdown4' && (
                             <div className={styles.dropdown}>
                                 {/* Dropdown content for Technologies goes here */}
                                 <ul>

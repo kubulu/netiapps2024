@@ -7,11 +7,11 @@ import { ApiService } from "../../services/api.service";
 import { setCookie, getCookie } from 'cookies-next';
 
 
-export default function OverviewSection(home: any) {
+export default function OverviewSection({home, industries}: any) {
 
     const { scrollYProgress } = useScroll()
-    let services = home.home.services;
-    // console.log('SERR:',services);
+    let services = home.services;
+    console.log('SERR:',industries);
     const baseUrl = new ApiService();
     return(
         <div className={`${styles.overviewSection} bg-color-blue`}>
@@ -63,7 +63,7 @@ export default function OverviewSection(home: any) {
             </div>
 
 
-            <CasestudySection casestudy={home.home.casestudies}/>
+            <CasestudySection casestudy={home.casestudies}/>
             <TopTechnology/>
         </div>
     )
