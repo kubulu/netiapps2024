@@ -26,7 +26,8 @@ export class ApiService {
             return "https://netiapps2024.netiapps.com/";
         }
         else if(process.env.NEXT_PUBLIC_API_ENV == 'production'){
-              return "http://localhost:3000/";
+            //   return "http://localhost:3000/";
+            return "https://www.netiapps.com/";
         }else{
               return "https://www.netiapps.com/";
         }
